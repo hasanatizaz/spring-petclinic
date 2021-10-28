@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            	git 'https://github.com/hasanatizaz/spring-petclinic.git'
+                git branch: 'main', url: 'https://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@hasanatizaz/spring-petclinic.git'
                 sh 'mvnw package' 
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
             }
